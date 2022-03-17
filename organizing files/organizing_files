@@ -1,0 +1,61 @@
+# shutil: shell utils
+# copy, move, rename and delete files
+
+import os
+from pathlib import Path
+import shutil
+import send2trash
+import zipfile
+
+p = Path.home()
+
+# copy
+shutil.copy()  # file
+shutil.copytree()  # folder
+
+# move
+shutil.move()
+
+# delete
+os.unlink()  # file
+os.rmdir()  # folder
+shutil.rmtree()  # all folder in path
+
+# be sure of what file will be delete
+for filename in Path.home().glob('*.rxt'):
+    # os.unlink(filename
+    print(filename)
+
+# safe delete
+send2trash.send2trash()
+
+# walking a directory tree
+os.walk()
+# returns  a list of strings of folder's name, folders and files
+
+for folderName, subfolders, filenames in os.walk(""):
+    print('The current folder is ' + folderName)
+
+    for subfolder in subfolders:
+        print('Subfolder of ' + folderName + ': ' + subfolder)
+
+    for filename in filenames:
+        print('Folder inside ' + folderName + ': ' + filename)
+    print('')
+
+
+# compressing files with the zipfile module
+
+# reading zip files
+file = zipfile.ZipFile()
+file.close()
+
+# extracting zip files
+file = zipfile.ZipFile()
+file.extractall()
+file.close()
+
+# creating and adding to zip files
+file = zipfile.ZipFile()
+file.write()
+file.close()

@@ -25,4 +25,4 @@ def regex_strip(string_expr, *string_delete):
     pass
 
 
-regex_strip('        lacasalinda      ', 'casa')
+regex_strip('        helloworld      ', 'world')

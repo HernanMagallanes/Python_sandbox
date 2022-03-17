@@ -30,7 +30,6 @@ try:
         print('only positive integer numbers')
         number = input('Enter number : ')
 
-    # print(int(number))
 
 except ValueError:
     print('only numbers')

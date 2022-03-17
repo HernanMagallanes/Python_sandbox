@@ -39,7 +39,6 @@ def coin_exp_str(n_coins=100):
 
 
 N = 10_000
-# N = 10
 n = 100
 
 # total chance - avg of chances
@@ -63,12 +62,10 @@ for experimentNumber in range(N):
         streak_check = exp[c:c + 6]
 
         if len(streak_check) != 6:
-            # print('Not enough coins')
             break
 
         if streak_check == 'HHHHHH' or streak_check == 'TTTTTT':
             streak_count_in_exp += 1
-            # streak_count_total += 1
 
     p_exp = (streak_count_in_exp / number_of_intents_in_exp) * 100
 
@@ -77,7 +74,6 @@ for experimentNumber in range(N):
 
     total_intents += number_of_intents_in_exp
 
-    # print(f'Streaks: {streak_count_in_exp}')
     if N < 20:
         print('\n')
         print(f'Chance of a streak: {p_exp_round} %')
