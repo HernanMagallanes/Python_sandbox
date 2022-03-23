@@ -1,5 +1,9 @@
 # Opening all search results
 
+# webbrowser - opens a browser to specific page
+# request - downloads files and web pages
+# bs4 - parses HTML
+
 import webbrowser
 import requests
 import bs4

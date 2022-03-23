@@ -1,12 +1,15 @@
 # Parsing HTML with the bs4 module
 
-# beautifulSoup object
+# request - downloads files and web pages
+# bs4 - parses HTML
+
 import requests
 import bs4
 
 res = requests.get('https://nostarch.com/')
 res.raise_for_status()
 
+# beautifulSoup object
 noStarchSoup = bs4.BeautifulSoup(res.text, 'html.parser')
 print(f'type: {type(noStarchSoup)}')
 

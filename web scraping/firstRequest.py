@@ -1,4 +1,6 @@
 # Downloading files from web with the request module
+# request - downloads files and web pages
+
 import requests
 
 res = requests.get('https://automatetheboringstuff.com/files/rj.txt')
