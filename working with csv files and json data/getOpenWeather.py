@@ -10,7 +10,11 @@ from dotenv import load_dotenv
 # Step 1: Get location from the command line argument
 
 load_dotenv()
-APPID = os.getenv('APY_KEY')
+APPID = os.getenv('API_KEY')
+
+if APPID is None:
+    print('Create .env file and an api key from https://openweathermap.org/api/')
+    sys.exit()
 
 if len(sys.argv) < 2:
     print('Usage: getOpenWeather.py city_name, 2-letter_country_Code')
